@@ -1,0 +1,76 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+ 
+    <div class="container" *ngIf="ItemsInCart.length>0;else elseBlock">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive" >
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Prduct Image</th>
+                            <th>Product Name</th>
+                            <th>Description</th>
+                            <th>Base Price</th>
+                            <th>Total price</th>
+                            <th>Quantity</th>
+                            <!-- <th>Total</th> -->
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of ItemsInCart; index as i">
+                            <td>{{i+1}}</td>
+                            <td>img</td>
+                            <td>{{item.productName}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.price}}</td>
+                            <td>{{item.productPrice}}</td>
+                            <td>     <button (click)="updateQuantity((item),'-')" [disabled]="((item.Quantity)==1)"> <span class="material-symbols-outlined">remove</span></button>
+                                {{item.Quantity}}
+                            
+                                <button (click)="updateQuantity((item),'+')"> <span class="material-symbols-outlined">add</span></button>
+                            </td>
+                            <!-- <td>{{item.}}</td> -->
+                            <td>
+                                <button class="btn btn-danger" (click)="deleteItem((item.id))">Delete</button>
+                      
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td  [attr.colspan]="5">Total Amount</td>
+                            <td>{{TotalAmount}}</td>
+                            <td>{{qty}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+           
+                <button class="btn btn-outline-primary mx-3" (click)="placeOrder();">Place Orders</button><br>
+          
+        </div>
+    </div>
+
+
+
+
+
+
+<ng-template #elseBlock>
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+     <div class="center">
+        <img src="https://cdn1.iconfinder.com/data/icons/shopping-e-commerce/24/Full-Cart-512.png" id="img" style="width: 203px; height: 203px;">
+        <h4>Your cart is empty</h4>
+        <h6>Add item to it now</h6>
+        <button class="btn btn-primary">Shop</button>
+     </div>
+    </div>
+
+</ng-template>
+<br>
+<br>
+<!-- <app-footer></app-footer> -->

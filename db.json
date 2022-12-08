@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Category": [
+    {
+      "categoryName": "bookStore",
+      "id": 5
+    }
+  ],
+  "Products": [],
+  "Cart": [
+    {
+      "productName": "Book1",
+      "description": "Novel",
+      "category": "bookStore",
+      "price": "100",
+      "productPrice": 100,
+      "id": 8,
+      "Quantity": 1
+    },
+    {
+      "id": 2,
+      "productName": "Nike T-Shirt ",
+      "description": "White color size xl",
+      "category": "Clothes",
+      "price": "120",
+      "productPrice": 120,
+      "Quantity": 1
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+.Category{
+   
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+
+}
+.Navs{
+   
+    display: inline-block;
+    background-color: #aeb7b747;
+    position: relative;
+    width: 90;
+    height: 101vh;
+    width: 25vh;
+
+}
+a{
+color: rgb(7, 39, 27);
+font-size: 15px;
+font-family: sans-serif;
+text-decoration: none;
+margin-left: 20px;
+font-weight: 600;
+padding: 20px;
+
+line-height: 4vh;
+
+}

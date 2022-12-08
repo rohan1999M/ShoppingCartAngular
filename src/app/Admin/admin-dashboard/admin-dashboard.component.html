@@ -1,0 +1,88 @@
+
+<div class="container">
+<div style="padding: 30px; width: 1300px;" class="mx-auto">
+   <h1 style="text-align: center; margin-bottom: 80px;">ADD PRODUCTS</h1>
+  
+   
+   
+   <!-- <form [formGroup]="CatForm">
+    Add Category: <input type="text" formControlName="category" placeholder="add category">
+    
+    <button type="button"  class="btn btn-outline-primary mx-3"  (click)="add();">Add</button>
+   </form> -->
+   
+   
+  
+   <form [formGroup]="ProductForm">
+      Product Name: <input type="text" formControlName="productName" placeholder="add category">
+       Description: <input type="text" formControlName="description" placeholder="add description">
+       Price: <input type="text" formControlName="price" placeholder="add price">
+       Category: <select  formControlName="category">
+       <option *ngFor="let item of categoryArray" value={{item.categoryName}} >{{item.categoryName}}</option>    
+       </select>
+        <span>
+          <button type="button"  class="btn btn-outline-primary mx-3"  (click)="addPorduct();">Add</button>
+          <button type="button"  class="btn btn-outline-primary "  (click)="updateProducts();">UPDATE</button>
+        </span>
+    </form>
+   
+   </div>
+   
+   <hr>
+  
+   <div style="width: 200px;" class="mx-auto">
+      <button type="button"   class="btn btn-outline-primary " (click)="showProducts();">Show Products</button>
+   </div>
+  
+      <br>
+    
+       <div class="row">
+         <div class="col-sm" *ngFor="let pro of ProductArray">
+           <div class="card" style="width: 18rem; margin-top: 20px; margin-left: 20px;">
+               <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+               <div class="card-body">
+                 <h5 class="card-title">Product Name : {{pro.productName}}</h5>
+                 <p class="card-text">Description : {{pro.description}}</p>
+                 <p class="card-text">Price : {{pro.price}}</p>
+                 <button type="button" class="btn btn-outline-primary " (click)="editRow(pro)">Edit</button> 
+                 <button class="btn btn-outline-danger"(click)="deleteRow(pro.id)">Delete</button> 
+               </div>
+             </div>
+         </div>
+       </div>
+       
+</div>  
+    
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

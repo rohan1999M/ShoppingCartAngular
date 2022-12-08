@@ -1,0 +1,10 @@
+.fixed-bottom{
+    background-color: #071f20;
+    color: white;
+    text-align: center;
+    font-family: SF Pro Display,system-ui,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 200%;
+   font-size: 15px;
+  line-height: 25px; 
+  padding: 5px 5px 5px 5px;
+}

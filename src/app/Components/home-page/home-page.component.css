@@ -1,0 +1,13 @@
+.cardSection{
+  margin-top: 20px;
+  /* margin-left: 20px; */
+  margin-left: 10px;
+
+  
+}
+.card-title{
+  color: rgba(105, 179, 167, 0.884);
+  font-size: 25px;
+  text-align: center;
+  font-weight: 750;
+}

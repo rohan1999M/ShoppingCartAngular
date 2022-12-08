@@ -1,0 +1,18 @@
+
+    <div class="Navs">
+        <a routerLink="/addCategory">ADD CATEGORY</a><br>
+        <a routerLink="/manageCategory">MANAGE CATEGORY</a><br>
+        <a routerLink="/AdminDashboard">ADD PRODUCT</a>
+    </div>
+<div class="Category">
+    <form [formGroup]="CatForm">
+        Add Category: <input type="text" formControlName="category" placeholder="add category">
+        
+        <button type="button"  class="btn btn-outline-primary mx-3" [disabled]="CatForm.invalid" (click)="add();">Add</button>
+       </form>
+       <!-- <span><button type="button"  class="btn btn-outline-primary mx-3"  routerLink="/manageCategory">ManageCategory</button></span>
+       <div>
+        <button type="button"  class="btn btn-outline-primary mx-3"  routerLink="/AdminDashboard">AddProducts</button>
+       </div> -->
+       <span *ngIf="show">{{message}}</span>
+</div>

@@ -1,0 +1,109 @@
+<!-- <app-nav-bar></app-nav-bar> -->
+<div class="container">
+  <div class="cardSection">
+    <div class="row">
+      <div class="col" *ngFor="let item of Products">
+          <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title">{{item.productName}}</h5>
+              <p class="card-text"><b>Description :</b> {{item.description}} Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"><b>Price :</b> {{item.price}}</p>
+              
+              <div>
+                <!-- <span><button (click)="ViewDetails(item);" class="btn btn-outline-success mx-3">View Deatils</button> </span>  -->
+                
+                <span><button (click)="addToCart(item);" class="btn btn-outline-primary">Add To Cart</button> </span> 
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<!-- <app-footer></app-footer> -->
+<!-- <router-outlet></router-outlet> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
+   <div class="sec1">
+    <div class="image">
+       <img class="img"  src="https://www.medianews4u.com/wp-content/uploads/2021/08/AJX-Armani-Exchange-Watches-retains-Kartik-Aaryan-for-2021-Advertising-Campaign-in-India.jpg" style="width:750px; height:400px;">
+       <div class="top-right">
+         <p>Start Shopping <br>with us.</p>
+         <p class="text1">Armani Exchange is the most accessible and affordable line within the Armani family.<br> The line is not directly designed by Giorgio Armani but targets more of the <br>fast-fashion street style that a youthful audience is looking for.</p>
+         <button class="btn btn-outline-success btn-lg">Explore More</button>
+       </div>
+       </div>
+    </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<br> -->
+<!-- <section>
+  <div class="Section">
+    <div class="row">
+        <div class="col" *ngFor="let item of Products">
+            <div class="card" style="width: 18rem; height: 27rem;">
+                <img src="{{item.img}}" class="card-img-top" style="width: 276.8px; height: 225.7px; margin-top: 7.2px; margin-left: 0px;">
+                <div class="card-body">
+                  <h5 class="card-title">TYPE : {{item.productName}}</h5>
+                  <p class="card-text">GENDER: {{item.description}}</p> 
+                  <p class="card-text">GENDER: {{item.category}}</p> 
+                  <p class="card-text">PRICE : {{item.price}}</p>
+                  <a routerLink="#" class="btn btn-outline-success">Add To Cart</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    
+</div> 
+</section>
+<br>
+<br> -->
+
+
+

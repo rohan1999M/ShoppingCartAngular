@@ -1,0 +1,45 @@
+
+<div class="manageCategory">
+ <div class="Navs">
+
+     <a routerLink="/addCategory">ADD CATEGORY</a><br>
+     <a routerLink="/manageCategory">MANAGE CATEGORY</a><br>
+     <a routerLink="/AdminDashboard">ADD PRODUCT</a>
+ </div>
+ <div class="Category">
+    <form [formGroup]="CatForm">
+        Add Category: <input type="text" formControlName="categoryName" placeholder="add category">
+        
+        <button type="button"  class="btn btn-outline-primary mx-3"  (click)="updateCategory();">UPDATE</button>
+       </form>
+       <br>
+       <br>
+ 
+       <div class="card-table">
+        <div class="card-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let category of showCategory">
+                    <tr>
+                        <td>{{category.id}}</td>
+                        <td>{{category.categoryName}}</td>
+                        <td>
+                            <button class="btn btn-outline-primary mx-3" (click)="editRow((category));">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteRow((category.id))">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
